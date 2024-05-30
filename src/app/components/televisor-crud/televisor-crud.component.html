@@ -1,0 +1,70 @@
+<h1>Propiedades del Arrendatario</h1>
+
+<ul class="propiedades-list">
+  <li *ngFor="let propiedad of datosModelosService" (click)="seleccionarPropiedad(propiedad)">
+    <p><strong>ID:</strong> {{ propiedad.id }}</p>
+    <p><strong>Nombre de la propiedad:</strong> {{ propiedad.data }}</p>
+    <p><strong>Ubicación:</strong> {{ propiedad.marca }}</p>
+    <p><strong>Cantidad Personas:</strong> {{ propiedad.desGaratia}}</p>
+    
+    <button (click)="actualizarPropiedad()">Editar</button>
+    <button (click)="borrarPropiedad(propiedad.id)">Borrar</button>
+  </li>
+</ul>
+
+<div *ngIf="propiedadSeleccionada" class="propiedad-info">
+  <h2>Información de la Propiedad Seleccionada</h2>
+  <p><strong>ID:</strong> {{ propiedadSeleccionada.id }}</p>
+  <p><strong>Nombre de la propiedad:</strong> {{ propiedadSeleccionada.data }}</p>
+  <p><strong>Ubicación:</strong> {{ propiedadSeleccionada.desGaratia }}</p>
+  <p><strong>Cantidad Personas:</strong> {{ propiedadSeleccionada.descripcion}}</p>
+  <p><strong>Departamento:</strong> {{ propiedadSeleccionada.funAdicional }}</p>
+  <button (click)="actualizarPropiedad()">Editar</button>
+  <button (click)="borrarPropiedad(propiedadSeleccionada.id)">Borrar</button>
+</div>
+
+<div *ngIf="propiedadSeleccionada" class="actualizar-propiedad">
+  <h2>Actualizar Propiedad</h2>
+  <form (ngSubmit)="actualizarPropiedad()">
+    <div>
+      <label for="nombreActualizado">Nombre:</label>
+      <input type="text" id="nombreActualizado" name="nombreActualizado" [(ngModel)]="propiedadSeleccionada.marca" required>
+    </div>
+    <div>
+      <label for="ubicacionActualizada">Ubicación:</label>
+      <input type="text" id="ubicacionActualizada" name="ubicacionActualizada" [(ngModel)]="propiedadSeleccionada.data" required>
+    </div>
+    <div>
+      <label for="tamañoActualizado">Tamaño:</label>
+      <input type="text" id="tamañoActualizado" name="tamañoActualizado" [(ngModel)]="propiedadSeleccionada.descripcion" required>
+    </div>
+    <div>
+      <label for="departamentoActualizado">Departamento:</label>
+      <input type="text" id="departamentoActualizado" name="departamentoActualizado" [(ngModel)]="propiedadSeleccionada.marca" required>
+    </div>
+    <button type="submit">Actualizar</button>
+  </form>
+</div>
+
+<div>
+  <h2>Agregar Propiedad</h2>
+  <form (ngSubmit)="agregarPropiedad()">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevaPropiedad.data" required>
+    </div>
+    <div>
+      <label for="ubicacion">Ubicación:</label>
+      <input type="text" id="ubicacion" name="ubicacion" [(ngModel)]="nuevaPropiedad.desGaratia" required>
+    </div>
+    <div>
+      <label for="tamaño">Cantidad Personas:</label>
+      <input type="text" id="tamaño" name="tamaño" [(ngModel)]="nuevaPropiedad.descripcion" required>
+    </div>
+    <div>
+      <label for="departamento">Departamento:</label>
+      <input type="text" id="departamento" name="departamento" [(ngModel)]="nuevaPropiedad.funAdicional" required>
+    </div>
+    <button type="submit">Agregar</button>
+  </form>
+</div>

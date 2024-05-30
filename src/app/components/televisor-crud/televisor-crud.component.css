@@ -1,0 +1,150 @@
+
+  /* Estilos para el fondo de la página */
+  body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos generales del contenido */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+/* Estilos para la lista de propiedades */
+.propiedades-list {
+    list-style: none;
+    padding: 0;
+}
+
+.propiedades-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el formulario de agregar propiedad */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos para el contenido de las propiedades */
+.propiedades-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .propiedades-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .propiedades-list li button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .propiedades-list li button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .propiedades-list li:hover {
+    background-color: #eaeaea;
+  }
+  
+  .propiedad-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+  
+  .actualizar-propiedad {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+  
+  .actualizar-propiedad form {
+    margin-top: 20px;
+  }
+  
+  .actualizar-propiedad form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .actualizar-propiedad form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .actualizar-propiedad form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actualizar-propiedad form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
